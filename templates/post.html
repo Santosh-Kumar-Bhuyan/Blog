@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block postactive %} active {% endblock postactive%}
+
+{% block head %}
+
+   <style type="text/css">
+
+   body{
+       background: url("https://images.unsplash.com/photo-1599629395786-bb1970a6a02e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+       height: 100vh;
+       background-size: cover;
+       width: 100%;
+   }
+
+   </style>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container pt-5">
+<h2 class="text-center pt-3 pb-3 text-white">Popular Articles</h2>
+    {% for post in allPosts %}
+<div class="card flex-md-row mb-4 my-4 box-shadow h-md-250 bg-info">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-danger">Article by {{post.author}}</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">{{post.title}}</a>
+              </h3>
+              <p class="text-white">{{post.timestamp}}</p>
+              <p class="card-text mb-auto  pb-1">{{post.content| truncatechars:250}}</p>
+              <a href="/{{post.slug}}" role="button" class="btn btn-warning ">Continue reading</a>
+            </div>
+
+          </div>
+    {% endfor %}
+</div>
+
+
+ {% endblock %}

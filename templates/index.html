@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %} Home {% endblock %}
+{% block homeactive %} active {% endblock homeactive %}
+
+{% block body %}
+    <div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/img/pic1.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Albert Einstein</h3>
+        <p>It has become appallingly obvious that our technology has exceeded our humanity.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/pic2.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Christian Lous Lange</h3>
+        <p>Technology is a useful servant but a dangerous master.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/pic3.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Matt Mullenweg</h3>
+        <p>Technology is best when it brings people together.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</header>
+
+<hr class="pt-3">
+<div class="card bg-dark pt-1 pb-1">
+  <div class="card-body">
+    <h2 class="card-title text-center text-danger">ABOUT US</h2>
+    <p class="card-text text-center text-white">Dummy text: Its function as a filler or as a tool for comparing the visual impression of different typefaces
+Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content. This is required when, for example, the final text is not yet available. Dummy text is also known as 'fill text'. It is said that song composers of the past used dummy texts as lyrics when writing melodies in order to have a 'ready-made' text to sing with the melody. Dummy texts have been in use by typesetters since the 16th century.</p>
+      <div class="col text-center">
+    <a href="/about" class="btn btn-primary text-center">Read More</a>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
